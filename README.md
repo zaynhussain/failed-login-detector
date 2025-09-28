@@ -113,6 +113,3 @@ Deliverables include:
 
 **Zayn Hussain**  
 - [LinkedIn](https://www.linkedin.com/in/hussainzayn/)  
-- [GitHub](https://github.com/zaynhussain)  
-
-Project Link: [https://github.com/zaynhussain/Failed-SSH-Login-Detector](https://github.com/zaynhussain/Failed-SSH-Login-Detector)  
