@@ -1,5 +1,5 @@
 """
-Failed SSH Login Detector — polished single-file version
+Failed SSH Login Detector
 - Increment 1: TXT / CSV / JSON outputs (suspicious IPs by threshold)
 - Increment 2: ts, user, ip + events JSON (all & suspicious-only)
 - Increment 3: Analytics (top IPs/users, attempts by hour, total)
@@ -17,7 +17,7 @@ from pathlib import Path
 
 
 USERNAME_RE = re.compile(r"Failed password for (?:invalid user )?(\S+)")
-IP_RE = re.compile(r"from (\d+\.\d+\.\d+\.\d+)\b")  # anchored on 'from ' to avoid port numbers etc.
+IP_RE = re.compile(r"from (\d+\.\d+\.\d+\.\d+)\b") 
 
 
 def normalize_ts_three_tokens(parts):
@@ -229,7 +229,6 @@ def main():
 
     events, failed_attempts = parse_log(log_path)
 
-    # Console heads-up for suspicious IPs
     for ip, count in failed_attempts.items():
         if count >= args.threshold:
             print(f"Suspicious IP: {ip} ({count} failed attempts)")
